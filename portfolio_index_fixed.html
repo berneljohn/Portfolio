@@ -1,0 +1,2043 @@
+<!doctype html>
+<html lang="en" x-data="app()" :class="{'dark':dark}" class="scroll-smooth">
+  <head>
+    <!-- ═════════════ BASIC META ═════════════ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bernel John Suficiencia | Civil Engineering Student & CAD Designer
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Bernel John Suficiencia, a Civil Engineering student specializing in AutoCAD drafting, SketchUp and Blender 3D modeling, web development, and engineering design."
+    />
+    <meta
+      name="keywords"
+      content="Bernel John Suficiencia, Civil Engineering, AutoCAD, SketchUp, Blender, CAD Designer, 3D Modeling, Web Developer, Portfolio, Engineering Student"
+    />
+    <meta name="author" content="Bernel John Suficiencia" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://berneljohn.github.io/PORTFOLIO/" />
+    <meta name="theme-color" content="#FF6B2B" />
+
+    <!-- ═════════════ OPEN GRAPH ═════════════ -->
+    <meta
+      property="og:title"
+      content="Bernel John Suficiencia | Civil Engineering Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore my portfolio featuring civil engineering projects, AutoCAD drafting, 3D modeling, surveying, web development, and creative digital solutions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://berneljohn.github.io/PORTFOLIO/" />
+    <meta property="og:site_name" content="Bernel John Portfolio" />
+    <meta property="og:locale" content="en_PH" />
+    <meta
+      property="og:image"
+      content="https://berneljohn.github.io/PORTFOLIO/pictures/main/mylogo.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://berneljohn.github.io/PORTFOLIO/pictures/main/mylogo.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Bernel John Suficiencia - Civil Engineering Portfolio Preview"
+    />
+
+    <!-- ═════════════ TWITTER / X ═════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bernel John Suficiencia | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Civil Engineering student specializing in AutoCAD, SketchUp, Blender, web development, and engineering design."
+    />
+    <meta
+      name="twitter:image"
+      content="https://berneljohn.github.io/PORTFOLIO/pictures/main/mylogo.png"
+    />
+
+    <!-- ═════════════ FAVICON ═════════════ -->
+    <link
+      rel="icon"
+      href="https://berneljohn.github.io/PORTFOLIO/pictures/main/mylogo.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://berneljohn.github.io/PORTFOLIO/pictures/main/mylogo.png"
+    />
+
+    <!-- ═════════════ GOOGLE FONTS ═════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ═════════════ LIBRARIES ═════════════ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="script.js"></script>
+
+    <!-- ═════════════ EMAILJS ═════════════ -->
+    <script>
+      emailjs.init({
+        publicKey: "AZ7qjwoTyNP-h02k7",
+      });
+    </script>
+
+    <!-- ═════════════ TAILWIND CONFIGURATION ═════════════ -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["PT Sans", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+            colors: {
+              accent: "#FF6B2B",
+              "accent-light": "#FF8F5C",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- ═════════════ CUSTOM STYLES ═════════════ -->
+    <style>
+      /* ═════════════ GLOBAL ═════════════ */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "DM Sans", sans-serif;
+        scroll-behavior: smooth;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "PT Sans", sans-serif;
+      }
+      body {
+        transition:
+          background-color 0.35s ease,
+          color 0.35s ease;
+      }
+
+      /* ═════════════ NOISE OVERLAY ═════════════ */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.35;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+      }
+
+      /* ═════════════ CUSTOM SCROLLBAR ═════════════ */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff6b2b;
+        border-radius: 999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff814f;
+      }
+
+      /* ═════════════ READING PROGRESS ═════════════ */
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: #ff6b2b;
+        z-index: 100;
+        transition: width 0.1s linear;
+      }
+
+      /* ═════════════ REVEAL ANIMATION ═════════════ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        will-change: opacity, transform;
+        transition:
+          opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .d1 {
+        transition-delay: 0.08s;
+      }
+      .d2 {
+        transition-delay: 0.16s;
+      }
+      .d3 {
+        transition-delay: 0.24s;
+      }
+      .d4 {
+        transition-delay: 0.32s;
+      }
+      .d5 {
+        transition-delay: 0.4s;
+      }
+      .d6 {
+        transition-delay: 0.48s;
+      }
+
+      /* ═════════════ NAVIGATION LINK ═════════════ */
+      .nl {
+        position: relative;
+      }
+      .nl::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background: currentColor;
+        transition: width 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .nl:hover::after,
+      .nl.on::after {
+        width: 100%;
+      }
+      .nl.on {
+        font-weight: 500;
+      }
+
+      /* ═════════════ SHIMMER BUTTON ═════════════ */
+      .shimmer {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .shimmer::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        left: -120%;
+        width: 60%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.28),
+          transparent
+        );
+        transform: skewX(-22deg);
+        transition: left 0.65s ease;
+      }
+      .shimmer:hover::after {
+        left: 170%;
+      }
+
+      /* ═════════════ PHOTO FRAME ═════════════ */
+      .pf {
+        overflow: hidden;
+        background: #d4d4d8;
+      }
+      .pf img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .pf:hover img {
+        transform: scale(1.05);
+      }
+
+      /* ═════════════ CARD HOVER ═════════════ */
+      .card-h {
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.25s ease,
+          box-shadow 0.35s ease;
+      }
+      .card-h:hover {
+        transform: translateY(-6px);
+      }
+
+      /* ═════════════ SKILL TAG ═════════════ */
+      .stag {
+        transition:
+          border-color 0.25s ease,
+          background-color 0.25s ease,
+          color 0.25s ease;
+      }
+
+      /* ═════════════ ALPINE.JS ═════════════ */
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <!-- ═════════════ BACK TO TOP BUTTON ═════════════ -->
+
+
+  <!-- ═════════════ BODY ═════════════ -->
+  <body
+    class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased"
+  >
+    <!-- Reading Progress -->
+    <div
+      class="progress-bar"
+      :style="`width:${progress}%`"
+      role="progressbar"
+      :aria-valuenow="progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-label="Reading progress"
+    ></div>
+
+    <!-- ═════════════ HEADER ═════════════ -->
+    <header
+      class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+      :class="sc?'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5':''"
+    >
+      <!-- ═════════════ DESKTOP NAVIGATION ═════════════ -->
+      <nav
+        class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"
+        aria-label="Main navigation"
+      >
+        <!-- Logo -->
+        <a
+          href="#hero"
+          class="font-display font-bold text-xl tracking-tight relative z-10"
+        >
+          <span class="text-zinc-900 dark:text-white">BERNEL </span
+          ><span class="text-accent">JOHN</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
+          <li>
+            <a
+              href="#services"
+              class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              :class="s==='services'?'on !text-zinc-900 dark:!text-white':''"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#work"
+              class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              :class="s==='work'?'on !text-zinc-900 dark:!text-white':''"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              :class="s==='about'?'on !text-zinc-900 dark:!text-white':''"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#reviews"
+              class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              :class="s==='reviews'?'on !text-zinc-900 dark:!text-white':''"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
+              :class="s==='contact'?'on !text-zinc-900 dark:!text-white':''"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Header Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Dark Mode -->
+          <button
+            @click="dark=!dark"
+            class="w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
+            :aria-label="dark?'Light mode':'Dark mode'"
+          >
+            <svg
+              x-show="!dark"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+              />
+            </svg>
+            <svg
+              x-show="dark"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"
+              />
+            </svg>
+          </button>
+
+          <!-- Contact Button -->
+          <a
+            href="#contact"
+            class="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors"
+          >
+            Contact me 
+          </a>
+
+          <!-- Mobile Toggle -->
+          <button
+            @click="mm=!mm"
+            class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800"
+            :aria-expanded="mm"
+            aria-label="Toggle menu"
+          >
+            <svg
+              x-show="!mm"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              x-show="mm"
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ═════════════ MOBILE MENU ═════════════ -->
+      <div
+        x-show="mm"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 -translate-y-2"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 -translate-y-2"
+        class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900"
+      >
+        <ul
+          class="flex flex-col px-6 py-5 gap-4 text-sm font-medium"
+          role="list"
+        >
+          <li>
+            <a
+              href="#services"
+              @click="mm=false"
+              class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#work"
+              @click="mm=false"
+              class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              @click="mm=false"
+              class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#reviews"
+              @click="mm=false"
+              class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors"
+              >Reviews</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              @click="mm=false"
+              class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors"
+              >Contact</a
+            >
+          </li>
+
+          <!-- Mobile CTA -->
+          <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
+            <a
+              href="#contact"
+              @click="mm=false"
+              class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full"
+            >
+              Contact me 
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ==========================================================
+    MAIN CONTENT
+========================================================== -->
+    <main>
+      <!-- ═════════════ HERO SECTION ═════════════ -->
+      <section
+        id="hero"
+        class="relative min-h-screen flex items-center pt-16 overflow-hidden"
+      >
+        <!-- Background Decorations -->
+        <div
+          class="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-0 w-64 h-64 bg-zinc-200/50 dark:bg-zinc-800/30 rounded-full blur-3xl pointer-events-none"
+          aria-hidden="true"
+        ></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- ═════════════ HERO CONTENT ═════════════ -->
+            <div>
+              <!-- Intro -->
+              <p
+                class="reveal text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-3"
+              >
+                Building Ideas Into Meaningful Solutions
+              </p>
+
+              <!-- Heading -->
+              <h1
+                class="reveal d1 font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-6"
+              >
+                Hi, I'm
+                <span><a href="#about" class="text-accent">Bernel</a></span>
+              </h1>
+
+              <!-- Description -->
+              <p
+                class="reveal d2 text-lg md:text-xl text-zinc-700 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10 text-justify"
+              >
+                Every project is an opportunity to learn, improve, and create
+                something meaningful. As a
+                <strong class="font-medium text-zinc-900 dark:text-zinc-100"
+                  >Civil Engineering student</strong
+                >
+                with a growing passion for technology and design, I focus on
+                delivering thoughtful, well-crafted work that reflects
+                professionalism, attention to detail, and a commitment to
+                excellence. Whether solving engineering challenges or building
+                digital experiences, I strive to make every idea count.
+              </p>
+
+              <!-- Buttons -->
+              <div class="reveal d3 flex flex-wrap gap-4">
+                <a
+                  href="#work"
+                  class="shimmer inline-flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors text-sm"
+                >
+                  Explore My Work
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#contact"
+                  class="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors text-sm"
+                  >Get in touch</a
+                >
+              </div>
+
+              <!-- Statistics -->
+              <div
+                class="reveal d4 flex gap-8 mt-14 pt-8 border-t border-zinc-200 dark:border-zinc-800"
+              >
+                <div>
+                  <p
+                    class="counter font-display font-bold text-3xl text-zinc-900 dark:text-white"
+                    data-target="15"
+                    data-suffix="+"
+                  >
+                    0
+                  </p>
+                  <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                    Academic & Personal <br />
+                    Projects
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="counter font-display font-bold text-3xl text-zinc-900 dark:text-white"
+                    data-target="100"
+                    data-suffix="%"
+                  >
+                    0
+                  </p>
+                  <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                    Commitment to <br />Quality
+                  </p>
+                </div>
+                <div>
+                  <p
+                    class="counter font-display font-bold text-3xl text-zinc-900 dark:text-white"
+                    data-target="3"
+                    data-suffix="+"
+                  ></p>
+                  <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                    Years of Continuous Learning
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ═════════════ HERO IMAGE ═════════════ -->
+            <div class="reveal d2 flex justify-center md:justify-end">
+              <div
+                class="relative w-80 h-96 md:w-96 md:h-[430px] lg:w-[450px] lg:h-[580px]"
+              >
+                <!-- Profile Image -->
+                <div class="pf hero-image w-full h-full rounded-3xl">
+                  <img
+                    src="pictures/main/bjoffice.png"
+                    alt="Bernel John Suficiencia, Civil Engineering student and designer"
+                    loading="eager"
+                  />
+                </div>
+
+                <!-- Availability Badge -->
+                <a
+                  href="#contact"
+                  class="absolute -bottom-4 -left-4 bg-accent text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg"
+                >
+                  Available for New Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ═════════════ SERVICES SECTION ═════════════ -->
+      <section id="services" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+        <div class="max-w-6xl mx-auto px-6">
+          <!-- ═════════════ SECTION HEADER ═════════════ -->
+          <div class="mb-14">
+            <p
+              class="reveal text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-3"
+            >
+              What I do
+            </p>
+            <h2
+              class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white"
+            >
+              Services
+            </h2>
+          </div>
+
+          <!-- ═════════════ SERVICES GRID ═════════════ -->
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Service 1 : 2D Drafting & AutoCAD -->
+            <article
+              class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-500"
+            >
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl mb-6 group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+              >
+                <img
+                  src="pictures/services/autocad.png"
+                  alt="AutoCAD"
+                  class="w-10 h-10 object-contain"
+                />
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3"
+              >
+                2D Drafting & AutoCAD
+              </h3>
+              <p
+                class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed"
+              >
+                Create accurate and professional 2D technical drawings using
+                AutoCAD. From floor plans and engineering drawings to detailed
+                layouts, I ensure precision, organization, and industry-standard
+                documentation.
+              </p>
+            </article>
+
+            <!-- Service 2 : 3D Modeling -->
+            <article
+              class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-500"
+            >
+              <div class="flex items-center gap-3 mb-6">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/sketchup.png"
+                    alt="SketchUp"
+                    class="w-10 h-10 object-contain"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/blender.png"
+                    alt="Blender"
+                    class="w-10 h-10 object-contain"
+                  />
+                </div>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3"
+              >
+                3D Modeling & Visualization
+              </h3>
+              <p
+                class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed"
+              >
+                Bring ideas to life through detailed 3D models using Blender and
+                SketchUp. Whether it's architectural visualization, product
+                concepts, or creative designs, I develop realistic models that
+                help visualize projects before they're built.
+              </p>
+            </article>
+
+            <!-- Service 3 : Video Editing -->
+            <article
+              class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-500"
+            >
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl mb-6 group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+              >
+                <img
+                  src="pictures/services/capcut.png"
+                  alt="CapCut"
+                  class="w-10 h-10 object-contain"
+                />
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3"
+              >
+                Video Editing
+              </h3>
+              <p
+                class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed"
+              >
+                Transform raw footage into engaging, high-quality videos with
+                smooth transitions, color correction, sound enhancement, and
+                storytelling. Whether for social media, promotional content, or
+                personal projects, I create videos that capture attention and
+                deliver your message effectively.
+              </p>
+            </article>
+
+            <!-- Service 4 : Photo Editing -->
+            <article
+              class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-500"
+            >
+              <div class="flex items-center gap-3 mb-6">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/picsart.webp"
+                    alt="Picsart"
+                    class="w-10 h-10 object-contain"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/lightroom.png"
+                    alt="Lightroom"
+                    class="w-10 h-10 object-contain"
+                  />
+                </div>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3"
+              >
+                Photo Editing & Graphic Enhancement
+              </h3>
+              <p
+                class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed"
+              >
+                Enhance images with professional retouching, color correction,
+                background removal, and creative editing. I focus on producing
+                clean, polished visuals that elevate your brand and leave a
+                lasting impression.
+              </p>
+            </article>
+
+            <!-- Service 5 : Microsoft Office -->
+            <article
+              class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-500"
+            >
+              <div class="flex items-center gap-3 mb-6">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/excel.png"
+                    alt="Excel"
+                    class="w-10 h-10 object-contain"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/powerpoint.png"
+                    alt="PowerPoint"
+                    class="w-8 h-8 object-contain"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/mword.png"
+                    alt="Mword"
+                    class="w-8 h-8 object-contain"
+                  />
+                </div>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3"
+              >
+                Microsoft Office Solutions
+              </h3>
+              <p
+                class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed"
+              >
+                Create professional documents, organize data, and design
+                impactful presentations using Microsoft Word, Excel, and
+                PowerPoint. I focus on accuracy, organization, and polished
+                results that support academic, business, and professional
+                projects.
+              </p>
+            </article>
+
+            <!-- Service 6 : Website Development -->
+            <article
+              class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 transition-all duration-500"
+            >
+              <div class="flex items-center gap-3 mb-6">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/html.png"
+                    alt="HTML"
+                    class="w-8 h-8 object-contain"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/css.png"
+                    alt="CSS"
+                    class="w-8 h-8 object-contain"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-300 rounded-xl group-hover:bg-orange-500/20 dark:group-hover:bg-white group-hover:shadow-lg transition-all duration-500"
+                >
+                  <img
+                    src="pictures/services/java.webp"
+                    alt="Java"
+                    class="w-10 h-10 object-contain"
+                  />
+                </div>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3"
+              >
+                Website Development
+              </h3>
+              <p
+                class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed"
+              >
+                Build responsive and modern websites using HTML, CSS, and
+                JavaScript with a focus on clean design, smooth user experience,
+                and optimized performance across all devices.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════════ WORK SECTION ═════════════ -->
+      <section id="work" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+          <!-- ═════════════ SECTION HEADER ═════════════ -->
+          <div
+            class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14"
+          >
+            <div>
+              <p
+                class="reveal text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-3"
+              >
+                PORTFOLIO
+              </p>
+              <h2
+                class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white"
+              >
+                Selected work
+              </h2>
+            </div>
+            <a
+              href="allprojects.html"
+              class="reveal d1 text-md font-medium text-zinc-500 dark:text-zinc-400 hover:text-accent transition-colors self-start sm:self-auto nl"
+              >View all projects →</a
+            >
+          </div>
+
+          <!-- ═════════════ PROJECT GRID ═════════════ -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- ═════════════ FEATURED PROJECT ═════════════ -->
+            <article
+              class="card-h reveal d1 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent md:row-span-2 "
+            >
+              <!-- Project Image -->
+              <div class="pf w-full h-64 md:h-80">
+                <a href="project1.html">
+                  <img
+                    src="pictures/project1/autocadwork.png"
+                    alt="Structural & Architectural Drafting Projects"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+        
+              <!-- Project Content -->
+              <div class="p-7 " >
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full"
+                    >AutoCAD</span
+                  >
+                  <span
+                    class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full"
+                    >Engineering Design</span
+                  >
+                </div>
+
+                <!-- Title -->
+                <a href="project1.html">
+                  <h3
+                    class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors"
+                  >
+                    Structural & Architectural Drafting Projects
+                  </h3>
+                </a>
+
+                <!-- Description -->
+                <p
+                  class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5"
+                >
+                  Created precise 2D technical drawings using AutoCAD, including
+                  floor plans, layouts, and engineering documentation. Focused
+                  on accuracy, proper organization, and professional
+                  presentation following drafting standards.<br /><br />Developed
+                  drafting skills through academic projects by applying
+                  engineering concepts, technical measurements, and design
+                  principles to produce clear and detailed drawings.<br /><br />Committed
+                  to continuous learning and improvement, I actively explore
+                  more efficient drafting techniques and industry best practices
+                  to enhance the quality of my work. Every project strengthens
+                  my attention to detail, problem-solving abilities, and
+                  understanding of engineering design, preparing me to
+                  contribute effectively to professional engineering
+                  environments.
+                </p>
+
+                <!-- Link -->
+                <a
+                  href="project1.html"
+                  class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl group-hover:text-accent transition-colors"
+                >
+                  View Project  
+                </a>
+              </div>
+            </article>
+
+            <!-- ═════════════ PROJECT CARD 02 ═════════════ -->
+            <article
+              class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent"
+            >
+              <!-- Project Image -->
+              <div class="pf w-full h-48">
+                <a href="allprojects.html">
+                  <img
+                    src="pictures/project2/blenderwork.png"
+                    alt="blenderwork"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <!-- Project Content -->
+              <div class="p-6">
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span
+                    class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full"
+                    >3D Design</span
+                  >
+                  <span
+                    class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full"
+                    >Blender • SketchUp</span
+                  >
+                </div>
+
+                <!-- Title -->
+                <a href="allprojects.html">
+                  <h3
+                    class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5 group-hover:text-accent transition-colors"
+                  >
+                    3D Modeling & Visualization Projects
+                  </h3>
+                </a>
+
+                <!-- Description -->
+                <p
+                  class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4"
+                >
+                  Transformed engineering and creative concepts into detailed 3D
+                  models using Blender and SketchUp. Created visual
+                  representations that help communicate ideas, designs, and
+                  project concepts before construction.
+                </p>
+
+                <!-- Link -->
+                <a
+                  href="allprojects.html"
+                  class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl group-hover:text-accent transition-colors"
+                  >View Project</a
+                >
+              </div>
+            </article>
+
+            <!-- ═════════════ PROJECT CARD 03 ═════════════ -->
+            <article
+              class="card-h reveal d3 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent"
+            >
+              <!-- Project Image -->
+              <div class="pf w-full h-48">
+                <a href="allprojects.html">
+                  <img
+                    src="pictures/project3/vscodework.png"
+                    alt="vscodework"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <!-- Project Content -->
+              <div class="p-6">
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span
+                    class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full"
+                    >HTML</span
+                  >
+                  <span
+                    class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full"
+                    >CSS</span
+                  >
+                  <span
+                    class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full"
+                    >JavaScript</span
+                  >
+                </div>
+
+                <!-- Title -->
+                <a href="allprojects.html">
+                  <h3
+                    class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5 group-hover:text-accent transition-colors"
+                  >
+                    Web Development Projects
+                  </h3>
+                </a>
+
+                <!-- Description -->
+                <p
+                  class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4"
+                >
+                  Bold editorial site for a Paris-based branding studio.
+                  Scroll-driven animations and custom cursor to match their
+                  premium positioning.
+                </p>
+
+                <!-- Link -->
+                <a
+                  href="allprojects.html"
+                  class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl group-hover:text-accent transition-colors"
+                  >View Project</a
+                >               
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ═════════════ ABOUT SECTION ═════════════ -->
+      <section id="about" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <!-- About Image -->
+            <div class="reveal order-2 md:order-1">
+              <div class="pf w-full h-[550px] max-w-md mx-auto rounded-3xl">
+                <img src="pictures/main/engbernel.png" alt="Eliott" loading="lazy" />
+              </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="order-1 md:order-2">
+              <p
+                class="reveal text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-3"
+              >
+                About me
+              </p>
+
+              <!-- Heading -->
+              <h2
+                class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6"
+              >
+                A bit about<br />who I am
+              </h2>
+
+              <!-- Description -->
+              <p
+                class="reveal d2 text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4"
+              >
+                I'm Bernel, a Civil Engineering student with an interest in
+                engineering, technology, and digital design. I enjoy working on
+                projects that let me combine creativity with technical skills,
+                whether it's drafting in AutoCAD, creating 3D models, editing
+                photos and videos, or building websites.
+              </p>
+
+              <p
+                class="reveal d3 text-zinc-700 dark:text-zinc-300 leading-relaxed mb-8"
+              >
+                I like keeping my work organized and paying attention to the
+                small details that make a difference. Every project helps me
+                learn something new, and I'm always looking for opportunities to
+                improve and grow. Outside of engineering, I enjoy exploring new
+                software and finding better ways to create, design, and solve
+                problems.
+              </p>
+
+              <!-- Skills -->
+              <div class="reveal d4">
+                <p
+                  class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3"
+                >
+                  Expertise &amp; Tools
+                </p>
+
+                <div
+                  class="flex flex-wrap gap-2"
+                  role="list"
+                  aria-label="Skills"
+                >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >AutoCAD</span
+                  >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >Blender</span
+                  >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >SketchUp</span
+                  >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >HTML, CSS & JavaScript</span
+                  >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >Photo Editing</span
+                  >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >Video Editing</span
+                  >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >File Organization</span
+                  >
+                  <span
+                    role="listitem"
+                    class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent"
+                    >Technical Documentation</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════════ TESTIMONIALS ═════════════ -->
+      <section id="reviews" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+          <!-- ═════════════ SECTION HEADER ═════════════ -->
+          <div
+            class="flex flex-col lg:flex-row justify-between lg:items-end gap-10 mb-14"
+          >
+            <!-- Heading -->
+            <div class="max-w-xl">
+              <p
+                class="reveal text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-3"
+              >
+                Project Feedback
+              </p>
+              <h2
+                class="reveal d1 font-display text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white"
+              >
+                What Others Say
+              </h2>
+              <p
+                class="reveal d2 mt-5 text-zinc-500 dark:text-zinc-400 leading-relaxed"
+              >
+                Feedback from classmates, collaborators, and project partners on
+                my technical skills, creativity, professionalism, and ability to
+                deliver high-quality digital and engineering projects.
+              </p>
+            </div>
+
+            <!-- Overall Rating -->
+            <div
+              class="reveal d3 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl px-8 py-6 shadow-sm"
+            >
+              <div class="flex items-center gap-5">
+                <h3 class="text-5xl font-bold text-zinc-900 dark:text-white">
+                  4.9
+                </h3>
+                <div>
+                  <div class="text-accent text-lg">★★★★★</div>
+                  <p class="text-sm text-zinc-500">
+                    Based on 28 project reviews
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ═════════════ SERVICE RATINGS ═════════════ -->
+          <div class="reveal d1 grid grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
+            <!-- Rating Card 1 -->
+            <div
+              class="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-4"
+            >
+              <p class="text-xs text-zinc-500">2D Drafting & AutoCAD</p>
+              <h3 class="mt-1 text-2xl font-bold text-zinc-900 dark:text-white">
+                5.0 <span class="text-accent text-xl">★</span>
+              </h3>
+            </div>
+
+            <!-- Rating Card 2 -->
+            <div
+              class="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-4"
+            >
+              <p class="text-xs text-zinc-500">3D Modeling</p>
+              <h3 class="mt-1 text-2xl font-bold text-zinc-900 dark:text-white">
+                4.9 <span class="text-accent text-xl">★</span>
+              </h3>
+            </div>
+
+            <!-- Rating Card 3 -->
+            <div
+              class="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-4"
+            >
+              <p class="text-xs text-zinc-500">Website Development</p>
+              <h3 class="mt-1 text-2xl font-bold text-zinc-900 dark:text-white">
+                4.8 <span class="text-accent text-xl">★</span>
+              </h3>
+            </div>
+
+            <!-- Rating Card 4 -->
+            <div
+              class="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-4"
+            >
+              <p class="text-xs text-zinc-500">Creative Editing</p>
+              <h3 class="mt-1 text-2xl font-bold text-zinc-900 dark:text-white">
+                5.0 <span class="text-accent text-xl">★</span>
+              </h3>
+            </div>
+          </div>
+          <!-- ═════════════ TESTIMONIALS GRID ═════════════ -->
+          <div class="reveal d1 grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- ═════════════ TESTIMONIAL 1 ═════════════ -->
+            <blockquote
+              class="group bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 border border-zinc-200 dark:border-zinc-800"
+            >
+              <!-- Rating -->
+              <div class="flex items-center justify-between mb-3">
+                <div class="text-accent text-sm">★★★★★</div>
+                <span class="text-[11px] text-zinc-500">March 2026</span>
+              </div>
+
+              <!-- Quote Icon -->
+              <svg
+                class="w-6 h-6 text-orange-200 mb-2"
+                fill="zinc-600 dark:text-white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7 17h4l2-4V7H7v6h3l-3 4zm10 0h4l2-4V7h-6v6h3l-3 4z" />
+              </svg>
+
+              <!-- Review -->
+              <p
+                class="italic leading-relaxed text-sm text-zinc-600 dark:text-zinc-400 mb-4"
+              >
+                "Bernel consistently delivers well-organized and accurate work.
+                His attention to detail, technical knowledge, and ability to use
+                industry-standard software make him a dependable collaborator on
+                both engineering and digital projects."
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 text-[11px]"
+                  >2D Drafting</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 text-[11px]"
+                  >AutoCAD</span
+                >
+              </div>
+
+              <!-- Client -->
+              <footer class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img
+                    src="pictures/reviews/defaultprofile.jpg"
+                    class="w-9 h-9 rounded-full object-cover"
+                  />
+                  <div>
+                    <h4
+                      class="text-sm font-semibold text-zinc-900 dark:text-white"
+                    >
+                      Project Collaborator
+                    </h4>
+                    <p class="text-xs text-zinc-500">
+                      Engineering Design Projects
+                    </p>
+                  </div>
+                </div>
+                <span class="text-green-500 text-[11px]">✔ Verified</span>
+              </footer>
+            </blockquote>
+
+            <!-- ═════════════ TESTIMONIAL 2 ═════════════ -->
+            <blockquote
+              class="group bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 border border-zinc-200 dark:border-zinc-800"
+            >
+              <!-- Rating -->
+              <div class="flex items-center justify-between mb-3">
+                <div class="text-accent text-sm">★★★★★</div>
+                <span class="text-[11px] text-zinc-500">April 2026</span>
+              </div>
+
+              <!-- Quote Icon -->
+              <svg
+                class="w-6 h-6 text-orange-200 mb-2"
+                fill="zinc-600 dark:text-white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7 17h4l2-4V7H7v6h3l-3 4zm10 0h4l2-4V7h-6v6h3l-3 4z" />
+              </svg>
+
+              <!-- Review -->
+              <p
+                class="italic leading-relaxed text-sm text-zinc-600 dark:text-zinc-400 mb-4"
+              >
+                "Working with Bernel is always a great experience. He
+                communicates clearly, learns new tools quickly, and produces
+                creative, high-quality results across 3D modeling,
+                presentations, and technical documentation."
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 text-[11px]"
+                  >3D Modeling</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 text-[11px]"
+                  >Microsoft Office</span
+                >
+              </div>
+
+              <!-- Client -->
+              <footer class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img
+                    src="pictures/reviews/defaultprofile.jpg"
+                    class="w-9 h-9 rounded-full object-cover"
+                  />
+                  <div>
+                    <h4
+                      class="text-sm font-semibold text-zinc-900 dark:text-white"
+                    >
+                      Classmate & Team Member
+                    </h4>
+                    <p class="text-xs text-zinc-500">Academic Projects</p>
+                  </div>
+                </div>
+                <span class="text-green-500 text-[11px]">✔ Verified</span>
+              </footer>
+            </blockquote>
+
+            <!-- ═════════════ TESTIMONIAL 3 ═════════════ -->
+            <blockquote
+              class="group bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 border border-zinc-200 dark:border-zinc-800"
+            >
+              <!-- Rating -->
+              <div class="flex items-center justify-between mb-3">
+                <div class="text-accent text-sm">★★★★★</div>
+                <span class="text-[11px] text-zinc-500">May 2026</span>
+              </div>
+
+              <!-- Quote Icon -->
+              <svg
+                class="w-6 h-6 text-orange-200 mb-2"
+                fill="zinc-600 dark:text-white"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7 17h4l2-4V7H7v6h3l-3 4zm10 0h4l2-4V7h-6v6h3l-3 4z" />
+              </svg>
+
+              <!-- Review -->
+              <p
+                class="italic leading-relaxed text-sm text-zinc-600 dark:text-zinc-400 mb-4"
+              >
+                "Bernel combines technical skills with creativity to develop
+                responsive websites, engaging visual content, and polished
+                project presentations. He is reliable, detail-oriented, and
+                always willing to improve."
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 text-[11px]"
+                  >Website Development</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-600 text-[11px]"
+                  >Creative Editing</span
+                >
+              </div>
+
+              <!-- Client -->
+              <footer class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <img
+                    src="pictures/reviews/defaultprofile.jpg"
+                    class="w-9 h-9 rounded-full object-cover"
+                  />
+                  <div>
+                    <h4
+                      class="text-sm font-semibold text-zinc-900 dark:text-white"
+                    >
+                      Project Partner
+                    </h4>
+                    <p class="text-xs text-zinc-500">
+                      Digital & Engineering Projects
+                    </p>
+                  </div>
+                </div>
+                <span class="text-green-500 text-[11px]">✔ Verified</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ CONTACT ═══ -->
+      <section id="contact" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+        <div class="max-w-6xl mx-auto px-6">
+          <div
+            class="bg-zinc-900 dark:bg-zinc-800 rounded-3xl p-10 md:p-16 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-40 h-40 bg-accent/10 rounded-full blur-2xl pointer-events-none"
+              aria-hidden="true"
+            ></div>
+
+            <div class="relative z-10 grid md:grid-cols-2 gap-12 items-start">
+              <div>
+                <p
+                  class="reveal text-xs font-semibold tracking-[0.25em] uppercase text-accent mb-3"
+                >
+                  Get in touch
+                </p>
+                <h2
+                  class="reveal d1 font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-5"
+                >
+                  Let's work<br />together
+                </h2>
+                <p class="reveal d2 text-zinc-400 leading-relaxed mb-8">
+                  Have a project in mind or need an extra hand? Whether it's
+                  creative editing, engineering drawings, 3D modeling, web
+                  development, or digital support, I'm ready to help. Feel free
+                  to reach out, and let's create something you'll be proud of.
+                </p>
+
+                <div class="reveal d3 flex flex-col gap-4">
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=berneljohn26@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
+                  >
+                    <span
+                      class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-sm">berneljohn26@gmail.com</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/share/16k9avYGTA/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
+                  >
+                    <span
+                      class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692V11.09h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.616h-3.12V24h6.114C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-sm">facebook.com/BernelJohn </span>
+                  </a>
+                  <a
+                    href="tel:+639765081995"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors"
+                  >
+                    <span
+                      class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0"
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.129a11.042 11.042 0 005.516 5.516l1.129-2.257a1 1 0 011.21-.502l4.493 1.498A1 1 0 0121 15.72V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-sm">+639765081995</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="reveal d2">
+                <form id="contact-form" onsubmit="sendMail(event)">
+                  <div class="flex flex-col gap-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                      <div>
+                        <label
+                          for="fname"
+                          class="block text-xs font-medium text-zinc-400 mb-1.5"
+                          >Name <span aria-hidden="true"></span
+                        ></label>
+                        <input
+                          type="text"
+                          id="fname"
+                          name="name"
+                          placeholder="Enter your full name"
+                          required
+                          autocomplete="name"
+                          class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors"
+                        />
+                      </div>
+                      <div>
+                        <label
+                          for="femail"
+                          class="block text-xs font-medium text-zinc-400 mb-1.5"
+                          >Email <span aria-hidden="true"></span
+                        ></label>
+                        <input
+                          type="email"
+                          id="femail"
+                          name="email"
+                          placeholder="you@example.com"
+                          required
+                          autocomplete="email"
+                          class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label
+                        for="fsubject"
+                        class="block text-xs font-medium text-zinc-400 mb-1.5"
+                        >Subject</label
+                      >
+                      <select
+                        id="fsubject"
+                        name="subject"
+                        onchange="
+                          toggleCustomSubject();
+                          updateSubjectColor(this);
+                        "
+                        required
+                        class="appearance-none w-full bg-zinc-800 border border-zinc-700 text-zinc-600 text-sm rounded-xl px-4 py-3 pr-12 focus:outline-none focus:border-accent transition-colors"
+                      >
+                        <option value="" disabled selected>
+                          Select a subject
+                        </option>
+                        <option value="2D Drafting">
+                          2D Drafting
+                        </option>
+                        <option value="3D Modeling">
+                          3D Modeling
+                        </option>
+                        <option value="Video Editing">Video Editing</option>
+                        <option value="Photo Editing">
+                          Photo Editing
+                        </option>
+                        <option value="Microsoft Office">
+                          Microsoft Office
+                        </option>
+                        <option value="Website Development">
+                          Website Development
+                        </option>
+                        <option value="Project Collaboration">
+                          Project Collaboration
+                        </option>
+                        <option value="Request for Service">
+                          Request for Service
+                        </option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <!-- Custom Subject (Hidden by default) -->
+                      <input
+                        type="text"
+                        id="customSubject"
+                        placeholder="Please specify your subject..."
+                        style="display: none"
+                        class="mt-3 w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="fmessage"
+                        class="block text-xs font-medium text-zinc-400 mb-1.5"
+                        >Message <span aria-hidden="true"></span
+                      ></label>
+                      <textarea
+                        id="fmessage"
+                        name="message"
+                        rows="4"
+                        placeholder="Tell me about your project, engineering requirements, or design needs..."
+                        required
+                        class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-600 focus:outline-none focus:border-accent transition-colors resize-none"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="shimmer w-full bg-accent text-white font-display font-bold text-sm py-3.5 rounded-xl hover:bg-accent-light transition-colors"
+                    >
+                      Send message →
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      /* Keep the custom-subject control in sync after a successful form reset. */
+      document.getElementById("contact-form")?.addEventListener("reset", () => {
+        const customSubject = document.getElementById("customSubject");
+        const subjectSelect = document.getElementById("fsubject");
+        if (customSubject) {
+          customSubject.style.display = "none";
+          customSubject.required = false;
+          customSubject.value = "";
+        }
+        if (subjectSelect) {
+          subjectSelect.classList.remove("text-white");
+          subjectSelect.classList.add("text-zinc-600");
+        }
+      });
+    </script>
+
+    <!-- ═════════════ BACK TO TOP BUTTON ═════════════ -->
+    <button
+      type="button"
+      x-cloak
+      x-show="showBackToTop"
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 translate-y-2"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 translate-y-2"
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      class="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-accent text-white shadow-lg shadow-black/15 transition hover:bg-accent-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <svg
+        class="h-5 w-5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+    </button>
+
+    <footer class="border-t border-zinc-100 dark:border-zinc-900">
+      <div
+        class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <p class="text-sm text-zinc-400">
+          © <span id="yr"></span> BernelJohn. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      /* ═════════════ ALPINE.JS APPLICATION ═════════════ */
+      function app() {
+        return {
+          /* ═════════════ APPLICATION STATE ═════════════ */
+          dark: false,
+          mm: false, // Mobile Menu
+          sc: false, // Navbar Scrolled
+          s: "hero", // Active Navigation
+          sections: [], // Cached Sections
+          showBackToTop: false, // Back-to-Top Button
+          progress: 0,
+
+          /* ═════════════ INITIALIZE APPLICATION ═════════════ */
+          init() {
+            this.cacheDOM();
+            this.initTheme();
+            this.initRevealAnimation();
+            this.initScrollEvents();
+            this.initCounters();
+            this.initParallax();
+            this.setCurrentYear();
+            this.updateScrollState();
+            this.updateSection();
+          },
+
+          /* ═════════════ CACHE DOM ELEMENTS ═════════════ */
+          cacheDOM() {
+            this.sections = [
+              "hero",
+              "services",
+              "work",
+              "about",
+              "reviews",
+              "contact",
+            ]
+              .map((id) => document.getElementById(id))
+              .filter(Boolean);
+          },
+
+          /* ═════════════ DARK MODE ═════════════ */
+          initTheme() {
+            const savedTheme = localStorage.getItem("theme");
+            this.dark =
+              savedTheme === "dark" ||
+              (!savedTheme &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches);
+            this.$watch("dark", (value) => {
+              localStorage.setItem("theme", value ? "dark" : "light");
+            });
+          },
+
+          /* ═════════════ SCROLL EVENTS ═════════════ */
+          initScrollEvents() {
+            let ticking = false;
+            window.addEventListener(
+              "scroll",
+              () => {
+                if (ticking) return;
+                requestAnimationFrame(() => {
+                  this.updateScrollState();
+                  this.updateSection();
+                  ticking = false;
+                });
+                ticking = true;
+              },
+              { passive: true },
+            );
+          },
+
+          /* ═════════════ SCROLL-DEPENDENT UI STATE ═════════════ */
+          updateScrollState() {
+            this.sc = window.scrollY > 20;
+            this.showBackToTop = window.scrollY > 500;
+            const maxScroll =
+              document.documentElement.scrollHeight - window.innerHeight;
+            this.progress =
+              maxScroll > 0
+                ? Math.min(100, Math.max(0, (window.scrollY / maxScroll) * 100))
+                : 0;
+          },
+
+          /* ═════════════ REVEAL ANIMATION ═════════════ */
+          initRevealAnimation() {
+            if (!("IntersectionObserver" in window)) {
+              document.querySelectorAll(".reveal").forEach((element) => {
+                element.classList.add("in");
+              });
+              return;
+            }
+
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (!entry.isIntersecting) return;
+                  entry.target.classList.add("in");
+                  observer.unobserve(entry.target);
+                });
+              },
+              { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+            );
+
+            document
+              .querySelectorAll(".reveal")
+              .forEach((element) => observer.observe(element));
+          },
+
+          /* ═════════════ HERO PARALLAX ═════════════ */
+          initParallax() {
+            const hero = document.querySelector(".hero-image");
+            const reducedMotion = window.matchMedia(
+              "(prefers-reduced-motion: reduce)",
+            ).matches;
+            const finePointer = window.matchMedia("(pointer: fine)").matches;
+
+            if (!hero || reducedMotion || !finePointer) return;
+
+            let frame = 0;
+            window.addEventListener(
+              "mousemove",
+              (event) => {
+                if (frame) return;
+                frame = requestAnimationFrame(() => {
+                  const x = (event.clientX / window.innerWidth - 0.5) * 10;
+                  const y = (event.clientY / window.innerHeight - 0.5) * 10;
+                  hero.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+                  frame = 0;
+                });
+              },
+              { passive: true },
+            );
+          },
+
+          /* ═════════════ COUNTER ANIMATION ═════════════ */
+          initCounters() {
+            const counters = document.querySelectorAll(".counter");
+            if (!counters.length) return;
+
+            if (!("IntersectionObserver" in window)) {
+              counters.forEach((counter) => {
+                counter.textContent =
+                  (counter.dataset.target || "0") +
+                  (counter.dataset.suffix || "");
+              });
+              return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                const counter = entry.target;
+                const target = Number(counter.dataset.target);
+                const suffix = counter.dataset.suffix || "";
+                if (!Number.isFinite(target) || target <= 0) {
+                  counter.textContent = (Number.isFinite(target) ? target : 0) + suffix;
+                  observer.unobserve(counter);
+                  return;
+                }
+                let current = 0;
+                const increment = target / 80;
+
+                function animate() {
+                  current += increment;
+                  if (current < target) {
+                    counter.textContent = Math.floor(current) + suffix;
+                    requestAnimationFrame(animate);
+                  } else {
+                    counter.textContent = target + suffix;
+                  }
+                }
+
+                animate();
+                observer.unobserve(counter);
+              });
+            });
+
+            counters.forEach((counter) => observer.observe(counter));
+          },
+
+          /* ═════════════ ACTIVE NAVIGATION ═════════════ */
+          updateSection() {
+            const bottomReached =
+              window.innerHeight + window.scrollY >=
+              document.body.scrollHeight - 60;
+
+            if (bottomReached) {
+              this.s = "contact";
+              return;
+            }
+
+            for (const section of this.sections) {
+              if (window.scrollY >= section.offsetTop - 130) {
+                this.s = section.id;
+              }
+            }
+          },
+
+          /* ═════════════ FOOTER YEAR ═════════════ */
+          setCurrentYear() {
+            const year = document.getElementById("yr");
+            if (year) year.textContent = new Date().getFullYear();
+          },
+        };
+      }
+    </script>
+
+    <!-- ═════════════ END OF PAGE SCRIPTS ═════════════ -->
+  </body>
+</html>
